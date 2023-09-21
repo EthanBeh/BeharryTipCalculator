@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TipCalculator {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+/*        Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to the tip calculator!");
         System.out.print("How many people are in your group? ");
         int ppl = scan.nextInt();
@@ -13,7 +13,7 @@ public class TipCalculator {
         System.out.print("Enter the cost for the first item, in dollars and cents (input -1 to end) ");
         double item = scan.nextDouble();
         double costs[];
-        costs = new double[3/* just confused as to how to make this theoretically infinite :/*/];
+        costs = new double[3/* just confused as to how to make this theoretically infinite :/];
         costs[0] = item;
         int i = 1;
         while (item != -1) {
@@ -29,5 +29,6 @@ public class TipCalculator {
             sum += costs[i];
         }
         sum /= size-1;
+        */
     }
 }

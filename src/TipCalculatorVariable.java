@@ -7,26 +7,27 @@ public class TipCalculatorVariable {
         System.out.print("How many people are in your group? ");
         int ppl = scan.nextInt();
         scan.nextLine();
-        System.out.print("What percentage are you tipping? (0-100)");
+        System.out.print("What percentage are you tipping? (0-100) ");
         int tip = scan.nextInt();
         scan.nextLine();
-        System.out.print("Enter the cost for the first item, in dollars and cents (input -1 to end) ");
+        System.out.print("Enter the cost for the first item, in dollars and cents (input -1 to end): $");
         double item = scan.nextDouble();
         double totalCost = item;
         while (item != -1) {
-            System.out.print("Enter the cost for the first item, in dollars and cents (input -1 to end) ");
+            System.out.print("Enter the cost for the first item, in dollars and cents (input -1 to end): $");
             item = scan.nextDouble();
             totalCost += item;
         }
         totalCost++; //removing the -1
-        double tipped = (int) (((totalCost * (double) (tip) / 100 ) * 100 ) + 0.5 ) / 100.00;
+        double tipped = (int) (((totalCost * (double) (tip) / 100) * 100) + 0.5) / 100.00;
 
-        System.out.print("---------------------------------------");
-        System.out.print("Total bill before tip: $" + totalCost);
-        System.out.print("Total percentage: " + tip + "%");
-        System.out.print("Total tip: $" + tipped);
-        System.out.print("Total bill with tip: " + (totalCost + tipped));
-        System.out.print("Per person cost before tip: ")
-
-
+        System.out.println("---------------------------------------");
+        System.out.println("Total bill before tip: $" + totalCost);
+        System.out.println("Total percentage: " + tip + "%");
+        System.out.println("Total tip: $" + tipped);
+        System.out.println("Total bill with tip: $" + (totalCost + tipped));
+        System.out.println("Per person cost before tip: $" + ((int) (((totalCost / ppl) * 100) + 0.5) / 100.00));
+        System.out.println("Tip per person: $" + ((int) (((tipped / ppl) * 100) + 0.5) / 100.00));
+        System.out.println("Total cost per person: $" + ((totalCost + tipped) / ppl));
     }
+}
