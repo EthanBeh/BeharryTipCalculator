@@ -10,7 +10,7 @@ public class Item {
     public void setName (String newName) {
         name = newName;
     }
-    public double checkPrice () {
+    public double checkPrice () { //if the item is in the menu, returns its price as a double, if not, returns 0.0
         if (name.equals("Hamburger")) {
             return 12.49;
         } else if (name.equals("Hamburger with Fries")) {

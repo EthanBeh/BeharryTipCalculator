@@ -10,6 +10,8 @@ public class TipCalculatorVariableMenu {
         System.out.print("What percentage are you tipping? (0-100) ");
         int tip = scan.nextInt();
         scan.nextLine();
+        System.out.println();
+        /* prints out the menu */
         System.out.println("Here's our menu for your perusal!");
         System.out.println("-----MAIN COURSES-----");
         System.out.println("Hamburger: $12.49");
@@ -31,11 +33,11 @@ public class TipCalculatorVariableMenu {
         System.out.print("Enter the name of your first item (input -1 to end): ");
         String name = scan.nextLine();
         Item item = new Item(name);
-        if (!name.equals("-1") && item.checkPrice() == 0.0) {
+        if (!name.equals("-1") && item.checkPrice() == 0.0) { // checks if the item is in the menu
             System.out.println("You might've misspelled that! Or maybe it's not on our menu! Please try again.");
         }
         double totalCost = item.checkPrice();
-        while (!name.equals("-1")) {
+        while (!name.equals("-1")) { //loops the code for the user to input items until the user inputs "-1"
             System.out.print("Enter the name of your next item (input -1 to end): ");
             name = scan.nextLine();
             item.setName(name);
