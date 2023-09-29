@@ -31,14 +31,22 @@ public class TipCalculatorVariableMenu {
         System.out.print("Enter the name of your first item (input -1 to end): ");
         String name = scan.nextLine();
         Item item = new Item(name);
+        if (!name.equals("-1") && item.checkPrice() == 0.0) {
+            System.out.println("You might've misspelled that! Or maybe it's not on our menu! Please try again.");
+        }
         double totalCost = item.checkPrice();
         while (!name.equals("-1")) {
             System.out.print("Enter the name of your next item (input -1 to end): ");
             name = scan.nextLine();
             item.setName(name);
+            if (!name.equals("-1") && item.checkPrice() == 0.0) {
+                System.out.println("You might've misspelled that! Or maybe it's not on our menu! Please try again.");
+                continue;
+            }
             totalCost += item.checkPrice();
         }
         double tipped = (int) (((totalCost * (double) (tip) / 100) * 100) + 0.5) / 100.00;
+        totalCost = (int) ((totalCost * 100) + 0.5) / 100.00;
 
         System.out.println("---------------------------------------");
         System.out.println("Total bill before tip: $" + totalCost);
@@ -47,6 +55,6 @@ public class TipCalculatorVariableMenu {
         System.out.println("Total bill with tip: $" + (totalCost + tipped));
         System.out.println("Per person cost before tip: $" + ((int) (((totalCost / ppl) * 100) + 0.5) / 100.00));
         System.out.println("Tip per person: $" + ((int) (((tipped / ppl) * 100) + 0.5) / 100.00));
-        System.out.println("Total cost per person: $" + ((totalCost + tipped) / ppl));
+        System.out.println("Total cost per person: $" + ((int) (((totalCost + tipped) / ppl) * 100) / 100.00));
     }
 }
