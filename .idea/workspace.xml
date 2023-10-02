@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4224f4e2-d719-4489-a197-3294247305dd" name="Changes" comment="added Mr. Miller's suggestion">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TipCalculatorVariableMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipCalculatorVariableMenu.java" afterDir="false" />
-    </list>
+    <list default="true" id="4224f4e2-d719-4489-a197-3294247305dd" name="Changes" comment="added Gavin and Stanford's suggestions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695993670548</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Gavin and Stanford's suggestions">
+      <option name="closed" value="true" />
+      <created>1696216760826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696216760826</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,6 +123,7 @@
     <MESSAGE value="initial commit - trying to use arrays, try a variable totalCost :thumbsup:" />
     <MESSAGE value="added variable system to try it out --- unfinished" />
     <MESSAGE value="added Mr. Miller's suggestion" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Mr. Miller's suggestion" />
+    <MESSAGE value="added Gavin and Stanford's suggestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Gavin and Stanford's suggestions" />
   </component>
 </project>
