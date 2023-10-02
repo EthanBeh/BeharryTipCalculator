@@ -1,4 +1,6 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TipCalculatorVariableMenu {
     public static void main(String[] args) {
@@ -32,31 +34,43 @@ public class TipCalculatorVariableMenu {
         System.out.println();
         System.out.print("Enter the name of your first item (input -1 to end): ");
         String name = scan.nextLine();
+        ArrayList<String> items = new ArrayList<String>();
         Item item = new Item(name);
         if (!name.equals("-1") && item.checkPrice() == 0.0) { // checks if the item is in the menu
             System.out.println("You might've misspelled that! Or maybe it's not on our menu! Please try again.");
+        } else {
+            items.add(name);
         }
         double totalCost = item.checkPrice();
         while (!name.equals("-1")) { //loops the code for the user to input items until the user inputs "-1"
             System.out.print("Enter the name of your next item (input -1 to end): ");
             name = scan.nextLine();
-            item.setName(name);
-            if (!name.equals("-1") && item.checkPrice() == 0.0) {
+            item.setName(name); //resets the name of the item in the variable "item" to the name of the item the user inputted so that that new name can be used by the commands called that use the Item class
+            if (!name.equals("-1") && item.checkPrice() == 0.0) { //see line 38
                 System.out.println("You might've misspelled that! Or maybe it's not on our menu! Please try again.");
-                continue;
+            } else {
+                items.add(name);
             }
-            totalCost += item.checkPrice();
+            totalCost += item.checkPrice(); //adds the cost of the item to total cost, if the user inputs -1, nothing is added
         }
-        double tipped = (int) (((totalCost * (double) (tip) / 100) * 100) + 0.5) / 100.00;
-        totalCost = (int) ((totalCost * 100) + 0.5) / 100.00;
+        double tipped = (int) (((totalCost * (double) (tip) / 100) * 100) + 0.5) / 100.00; //creates a double whose value is equal to how much the party has chosen to tip
+        totalCost = (int) ((totalCost * 100) + 0.5) / 100.00; //rounds totalCost to the nearest hundred
+
+        System.out.println("---------------------------------------");
+        System.out.println("Items ordered: ");
+        int i;
+        int itemsLength = items.size();
+        for (i = 0; i < itemsLength - 1; i++) {
+            System.out.println(items.get(i));
+        }
 
         System.out.println("---------------------------------------");
         System.out.println("Total bill before tip: $" + totalCost);
         System.out.println("Total percentage: " + tip + "%");
         System.out.println("Total tip: $" + tipped);
-        System.out.println("Total bill with tip: $" + (totalCost + tipped));
+        System.out.println("Total bill with tip: $" + (int) ((totalCost + tipped) * 100 + 0.5) / 100.00);
         System.out.println("Per person cost before tip: $" + ((int) (((totalCost / ppl) * 100) + 0.5) / 100.00));
         System.out.println("Tip per person: $" + ((int) (((tipped / ppl) * 100) + 0.5) / 100.00));
-        System.out.println("Total cost per person: $" + ((int) (((totalCost + tipped) / ppl) * 100) / 100.00));
+        System.out.println("Total cost per person: $" + ((int) (((totalCost + tipped) / ppl) * 100 + 0.5) / 100.00));
     }
 }

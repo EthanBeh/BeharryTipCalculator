@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4224f4e2-d719-4489-a197-3294247305dd" name="Changes" comment="added Mr. Miller's suggestion" />
+    <list default="true" id="4224f4e2-d719-4489-a197-3294247305dd" name="Changes" comment="added Mr. Miller's suggestion">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TipCalculatorVariableMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TipCalculatorVariableMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
